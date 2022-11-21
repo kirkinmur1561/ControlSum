@@ -43,8 +43,9 @@ namespace ControlSum
                           if (num > 9) num -= 9;
                           return num;
                       });
-            
-            return 10 - sum % 10;  
+
+            int luhnNum = 10 - sum % 10;
+            return luhnNum == 0 ? 0 : luhnNum;
         }
         
         /// <summary>
