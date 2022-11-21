@@ -53,6 +53,6 @@ namespace ControlSum
         /// <param name="array">Card number split into an array with Luhn number</param>
         /// <returns>if the numbers match then true is returned otherwise false</returns>
         public static bool Check(IEnumerable<int> array)=>
-            array.TakeLast(1).FirstOrDefault() == Create(array.SkipLast(1).ToArray());
+            array.LastOrDefault() == Create(array.SkipLast(1).ToArray());
     }
 }
