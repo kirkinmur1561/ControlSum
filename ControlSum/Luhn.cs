@@ -45,7 +45,7 @@ namespace ControlSum
                       });
 
             int luhnNum = 10 - sum % 10;
-            return luhnNum == 0 ? 0 : luhnNum;
+            return luhnNum == 10 ? 0 : luhnNum;
         }
         
         /// <summary>
